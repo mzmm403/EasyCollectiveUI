@@ -1,0 +1,15 @@
+{
+  "name": "easy-collective-ui",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "dependencies":{
+    "@easy-collective-ui/components": "workspace:*"
+  },
+  "author": "",
+  "license": "ISC"
+}
