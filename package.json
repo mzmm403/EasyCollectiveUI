@@ -4,7 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "pnpm --filter @easy-collective-ui/play dev",
+    "docs:dev": "pnpm --filter @easy-collective-ui/docs dev",
+    "docs:build": "pnpm --filter @easy-collective-ui/docs build",
+    "test": "echo 'hello world'"
   },
   "keywords": [],
   "author": "",
