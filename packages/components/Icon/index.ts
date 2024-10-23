@@ -1,7 +1,6 @@
-import Button from "./Button.vue"
+import Icon from "./Icon.vue"
 import { withInstall } from "@easy-collective-ui/utils"
 
-export const EcButton = withInstall(Button) 
-
+export const EcIcon = withInstall(Icon)
 
 export * from "./types"

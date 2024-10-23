@@ -1,1 +1,67 @@
-@import "./reset.css"
+@import './reset.css';
+
+:root {
+  /* colors */
+  --ec-color-white: #ffffff;
+  --ec-color-black: #000000;
+  --colors: (primary: #409eff, success: #67c23a, warning: #e6a23c, danger: #f56c6c, info: #909399);
+  --ec-bg-color: #ffffff;
+  --ec-bg-color-page: #f2f3f5;
+  --ec-bg-color-overlay: #ffffff;
+  --ec-text-color-primary: #303133;
+  --ec-text-color-regular: #606266;
+  --ec-text-color-secondary: #909399;
+  --ec-text-color-placeholder: #a8abb2;
+  --ec-text-color-disabled: #c0c4cc;
+  --ec-border-color: #dcdfe6;
+  --ec-border-color-light: #e4e7ed;
+  --ec-border-color-lighter: #ebeef5;
+  --ec-border-color-extra-light: #f2f6fc;
+  --ec-border-color-dark: #d4d7de;
+  --ec-border-color-darker: #cdd0d6;
+  --ec-fill-color: #f0f2f5;
+  --ec-fill-color-light: #f5f7fa;
+  --ec-fill-color-lighter: #fafafa;
+  --ec-fill-color-extra-light: #fafcff;
+  --ec-fill-color-dark: #ebedf0;
+  --ec-fill-color-darker: #e6e8eb;
+  --ec-fill-color-blank: #ffffff;
+  
+  @each $val, $color in var(--colors) {
+    --ec-color-$(val): $(color);
+    @for $i from 3 to 9 {
+      --ec-color-$(val)-light-$(i): mix(#fff, $(color), 0.$(i));
+    }
+    --ec-color-$(val)-dark-2: mix(#000, $(color), 0.2);
+  }
+
+  /* border */
+  --ec-border-width: 1px;
+  --ec-border-style: solid;
+  --ec-border-color-hover: var(--ec-text-color-disabled);
+  --ec-border: var(--ec-border-width) var(--ec-border-style) var(--ec-border-color);
+  --ec-border-radius-base: 4px;
+  --ec-border-radius-small: 2px;
+  --ec-border-radius-round: 20px;
+  --ec-border-radius-circle: 100%;
+
+  /*font*/
+  --ec-font-size-extra-large: 20px;
+  --ec-font-size-large: 18px;
+  --ec-font-size-medium: 16px;
+  --ec-font-size-base: 14px;
+  --ec-font-size-small: 13px;
+  --ec-font-size-extra-small: 12px;
+  --ec-font-family: 'Helvetica Neue', Helvetica, 'PingFang SC', 'Hiragino Sans GB',
+    'Microsoft YaHei', '\5fae\8f6f\96c5\9ed1', Arial, sans-serif;
+  --ec-font-weight-primary: 500;
+
+  /*disabled*/
+  --ec-disabled-bg-color: var(--ec-fill-color-light);
+  --ec-disabled-text-color: var(--ec-text-color-placeholder);
+  --ec-disabled-border-color: var(--ec-border-color-light);
+
+  /*animation*/
+  --ec-transition-duration: 0.4s;
+  --ec-transition-duration-fast: 0.2s;
+}

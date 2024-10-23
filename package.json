@@ -7,7 +7,8 @@
     "dev": "pnpm --filter @easy-collective-ui/play dev",
     "docs:dev": "pnpm --filter @easy-collective-ui/docs dev",
     "docs:build": "pnpm --filter @easy-collective-ui/docs build",
-    "test": "echo 'hello world'"
+    "test": "pnpm --filter @easy-collective-ui/components test",
+    "storybook": "pnpm --filter @easy-collective-ui/play storybook"
   },
   "keywords": [],
   "author": "",
@@ -18,6 +19,9 @@
     "@vitejs/plugin-vue": "^5.0.4",
     "@vitejs/plugin-vue-jsx": "^3.1.0",
     "@vue/tsconfig": "^0.5.1",
+    "@fortawesome/fontawesome-svg-core": "^6.5.1",
+    "@fortawesome/free-solid-svg-icons": "^6.5.1",
+    "@fortawesome/vue-fontawesome": "^3.0.6",
     "postcss-color-mix": "^1.1.0",
     "postcss-each": "^1.1.0",
     "postcss-each-variables": "^0.3.0",
