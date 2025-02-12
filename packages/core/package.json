@@ -1,6 +1,6 @@
 {
   "name": "easy-collective-ui",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Components Library by Vue3 + TS",
   "type": "module",
   "main": "./dist/umd/index.umd.cjs",
@@ -9,8 +9,8 @@
   "files": [
     "dist"
   ],
-  "exports":{
-    ".":{
+  "exports": {
+    ".": {
       "import": "./dist/es/index.js",
       "require": "./dist/umd/index.umd.cjs",
       "types": "./dist/types/core/index.d.ts"
