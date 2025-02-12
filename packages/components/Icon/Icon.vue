@@ -26,23 +26,8 @@ const customStyles = computed(() => ({ color: props.color ?? void 0 }));
     <font-awesome-icon v-bind="filterProps" />
   </i>
 </template>
-<style scoped>
-.ec-icon {
-    --ec-icon-color: inherit;
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    fill: currentColor;
-    color: var(--ec-icon-color);
-    font-size: inherit;
-}
-  
-@each $val in primary, info, success, warning, danger {
-    .ec-icon--$(val) {
-        --ec-icon-color: var(--ec-color-$(val));
-    }
-}
+<style>
+@import "./style.css";
 </style>
 
 

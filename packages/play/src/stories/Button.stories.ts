@@ -1,6 +1,7 @@
 import type { Meta,StoryObj,ArgTypes } from "@storybook/vue3"
 import {fn,within,userEvent,expect, clearAllMocks} from "@storybook/test"
 import { EcButton,EcButtonGroup } from "easy-collective-ui"
+import 'easy-collective-ui/dist/index.css'
 import set from "lodash-es/set";
 
 

@@ -7,5 +7,5 @@ import '@easy-collective-ui/theme/index.css';
 library.add(fas)
 const installer = makeInstaller(commponents);
 
-export * from "@easy-collective-ui/components"
+export * from "../components"
 export default installer;
