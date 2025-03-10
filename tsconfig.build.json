@@ -20,15 +20,19 @@
         "strict": true,
         "noUnusedLocals": true,
         "noUnusedParameters": true,
-        "noFallthroughCasesInSwitch": true
+        "noFallthroughCasesInSwitch": true,
+        "types":["node"],
+        "baseUrl": "./",
+        "paths": {
+          "@easy-collective-ui/components":["./packages/components"]
+        }
     },
     "include": [
+        "env.d.ts",
         "packages/core/index.ts",
         "packages/hooks/**/*.ts",
         "packages/utils/**/*.ts",
-        "packages/components/index.ts",
         "packages/components/**/*.ts",
-        "packages/components/**/*.vue"
     ],
     "exclude": ["packages/components/vitest.config.ts"]
 }

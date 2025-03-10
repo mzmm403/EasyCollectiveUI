@@ -1,0 +1,57 @@
+.ec-collapse {
+    --ec-collapse-border-color: var(--ec-border-color-light);
+    --ec-collapse-header-height: 48px;
+    --ec-collapse-header-bg-color: var(--ec-fill-color-blank);
+    --ec-collapse-header-text-color: var(--ec-text-color-primary);
+    --ec-collapse-header-font-size: 13px;
+    --ec-collapse-content-bg-color: var(--ec-fill-color-blank);
+    --ec-collapse-content-font-size: 13px;
+    --ec-collapse-content-text-color: var(--ec-text-color-primary);
+    --ec-collapse-disabled-text-color: var(--ec-disabled-text-color);
+    --ec-collapse-disabled-border-color: var(--ec-border-color-lighter);
+    border-top: 1px solid var(--ec-collapse-border-color);
+    border-bottom: 1px solid var(--ec-collapse-border-color);
+}
+.ec-collapse-item__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: var(--ec-collapse-header-height);
+    line-height: var(--ec-collapse-header-height);
+    background-color: var(--ec-collapse-header-bg-color);
+    color: var(--ec-collapse-header-text-color);
+    cursor: pointer;
+    font-size: var(--ec-collapse-header-font-size);
+    font-weight: 500;
+    transition: border-bottom-color var(--ec-transition-duration);
+    outline: none;
+    border-bottom: 1px solid var(--ec-collapse-border-color);
+    &.is-disabled {
+        color: var(--ec-collapse-disabled-text-color);
+        cursor: not-allowed;
+        background-image: none;
+    }
+    &.is-active {
+        border-bottom-color: transparent;
+        .header-angle {
+        transform: rotate(90deg);
+        }
+    }
+    .header-angle {
+        transition: transform var(--ec-transition-duration);
+    }
+}
+.ec-collapse-item__content {
+    will-change: height;
+    background-color: var(--ec-collapse-content-bg-color);
+    overflow: hidden;
+    box-sizing: border-box;
+    font-size: var(--ec-collapse-content-font-size);
+    color: var(--ec-collapse-content-text-color);
+    border-bottom: 1px solid var(--ec-collapse-border-color);
+    padding-bottom: 25px;
+}
+.slide-enter-active,
+.slide-leave-active {
+    transition: height var(--ec-transition-duration) ease-in-out;
+}

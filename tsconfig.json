@@ -22,5 +22,11 @@
         "noUnusedParameters": true,
         "noFallthroughCasesInSwitch": true
     },
-    "include": ["packages/**/*.ts", "packages/**/*.tsx", "packages/**/*.vue"]
+    "include": [
+      "env.d.ts",
+      "pckages/**/**/*.ts",
+      "packages/**/*.ts", 
+      "packages/**/*.tsx", 
+      "packages/**/*.vue"
+    ]
 }
