@@ -10,7 +10,8 @@
     "docs:build": "pnpm --filter @easy-collective-ui/docs build",
     "test": "cross-env NODE_ENV=test pnpm --filter @easy-collective-ui/components test",
     "build": "cross-env NODE_ENV=production pnpm --filter easy-collective-ui build",
-    "build:dev": "cross-env NODE_ENV=development pnpm --filter easy-collective-ui build:watch"
+    "build:dev": "cross-env NODE_ENV=development pnpm --filter easy-collective-ui build:watch",
+    "release": "pnpm --filter easy-collective-ui release"
   },
   "keywords": [],
   "author": "",

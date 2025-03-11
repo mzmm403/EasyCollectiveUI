@@ -60,6 +60,9 @@ const handleBtnClickThrottle = throttle(
 // defineExpose是用来导出组件的实例属性的，这样就可以在父组件中通过ref访问到这些属性了。
 defineExpose<ButtonInstance>({
   ref: _ref,
+  disabled,
+  size,
+  type
 });
 
 </script>

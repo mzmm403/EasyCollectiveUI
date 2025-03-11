@@ -4,15 +4,12 @@ layout: home
 
 hero:
   name: "Easy-Collective-UI"
-  text: "A comprehensive component library for vue"
+  text: "一款基于Vue3的组件库"
   tagline: My great project tagline
   actions:
     - theme: brand
-      text: Markdown Examples
-      link: /markdown-examples
-    - theme: alt
-      text: API Examples
-      link: /api-examples
+      text: 开始使用
+      link: /get-started
 
 features:
   - title: Feature A

@@ -3,7 +3,8 @@ import {
     EcIcon,
     EcButtonGroup,
     EcCollapse,
-    EcCollapseItem 
+    EcCollapseItem,
+    EcAlert 
 } from "@easy-collective-ui/components";
 import type { Plugin } from "vue";
 
@@ -12,5 +13,6 @@ export default [
     EcIcon,
     EcButtonGroup,
     EcCollapse,
-    EcCollapseItem
+    EcCollapseItem,
+    EcAlert
 ] as Plugin[];

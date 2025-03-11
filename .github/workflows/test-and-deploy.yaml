@@ -4,6 +4,8 @@ on:
   push:
     branches:
       - main
+      
+  workflow_dispatch:
 
 jobs:
   test:
@@ -44,7 +46,7 @@ jobs:
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
-      - name: Build Components
+      - name: Build component
         run: npm run build
 
       - name: Build docs

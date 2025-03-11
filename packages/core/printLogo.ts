@@ -19,7 +19,7 @@ export default function () {
             font-family: monospace;
             font-weight: 700;
         `
-        console.log(`%c${logo}`, rainbowGradient)
+        console.info(`%c${logo}`, rainbowGradient)
     }else if(DEV){
         // 开发环境
         console.log("[EasyCollectiveUI]: dev mode...")
