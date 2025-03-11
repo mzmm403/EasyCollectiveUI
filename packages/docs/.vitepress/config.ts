@@ -6,6 +6,7 @@ export default defineConfig({
   title: "Easy-Collective-UI",
   description: "一款基于vue3的组件库",
   base:"/EasyCollectiveUI/",
+  appearance: false,
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [
@@ -22,7 +23,12 @@ export default defineConfig({
         items: [
           { text: '快速开始', link: '/get-started' },
         ]
-      }
+      },
+      {
+        text: "基础组件",
+        collapsed: false,
+        items: [{ text: "Button 按钮", link: "components/button" }],
+      },
     ],
 
     socialLinks: [
@@ -35,7 +41,7 @@ export default defineConfig({
       dark: 'vitesse-dark'
     },
     lineNumbers: true,
-    config(md) {
+    config:(md) => {
       md.use(componentPreview)
       md.use(containerPreview)
     }
