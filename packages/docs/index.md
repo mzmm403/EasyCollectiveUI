@@ -7,7 +7,7 @@ hero:
   text: "一款基于Vue3的组件库"
   tagline: 一个共同学习知识的地方🌏
   image:
-    src: ./mzmm403.png
+    src: /mzmm403.png
     alt: 背景图片
   actions:
     - theme: brand
