@@ -5,18 +5,25 @@ layout: home
 hero:
   name: "Easy-Collective-UI"
   text: "一款基于Vue3的组件库"
-  tagline: My great project tagline
+  tagline: 一个共同学习知识的地方🌏
+  image:
+    src: ./mzmm403.png
+    alt: 背景图片
   actions:
     - theme: brand
       text: 开始使用
       link: /get-started
 
 features:
-  - title: Feature A
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature B
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature C
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
+  - icon: 📦
+    title: 开箱即用
+    details: 组件库提供简洁明了的 API 和组件结构，使开发人员能够快速上手并高效构建界面，减少开发时间和工作量。
+  - icon: 🔗
+    title: 基于ES Module的vite工具链开发
+    details: 组件库基于ES Module使用Vite + Vitest + Vitepress 工具链进行的开发。
+  - icon: 📂
+    title: 文档和实例十分详细
+    details: 组件库有详细的实例文档，同时组件库的开发流程文档也有详细的记载。
+    link: https://mzmm403.github.io/markdown/project/EasyCollectiveUI/
 ---
 

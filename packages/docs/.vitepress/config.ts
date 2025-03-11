@@ -6,7 +6,6 @@ export default defineConfig({
   title: "Easy-Collective-UI",
   description: "一款基于vue3的组件库",
   base:"/EasyCollectiveUI/",
-  appearance: false,
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [
@@ -49,7 +48,10 @@ export default defineConfig({
 
     socialLinks: [
       { icon: 'github', link: 'https://github.com/mzmm403/EasyCollectiveUI' }
-    ]
+    ],
+    footer: {
+        copyright:"Copyright © 2024-present Mzmm"
+    }
   },
   markdown: {
     theme: {
