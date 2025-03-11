@@ -28,7 +28,7 @@ demo-preview=../demo/button/Icon.vue
 
 ## 按钮组
 
-使用 `<er-button-group>` 对多个按钮分组。
+使用 `<ec-button-group>` 对多个按钮分组。
 
 ::: preview
 demo-preview=../demo/button/Group.vue
