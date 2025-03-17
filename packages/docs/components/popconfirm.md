@@ -29,9 +29,9 @@ demo-preview=../demo/popconfirm/Custom.vue
 
 可以通过 `confirm` 和 `cancel` 两个事件的监听来获取点击按钮后的回调
 
-::: preview
+<!-- ::: preview
 demo-preview=../demo/popconfirm/Callback.vue
-:::
+::: -->
 
 ## Popconfirm API
 

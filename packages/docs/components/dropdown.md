@@ -36,9 +36,9 @@ demo-preview=../demo/dropdown/HideOnClick.vue
 
 点击菜单项后会触发事件，用户可以通过相应的菜单项 `command` 进行不同的操作。
 
-::: preview
+<!-- ::: preview
 demo-preview=../demo/dropdown/Command.vue
-:::
+::: -->
 
 ## 下拉方法
 
@@ -60,9 +60,9 @@ demo-preview=../demo/dropdown/Disabled.vue
 
 设置 `split-button` 属性来让触发下拉元素呈现为按钮组，左边是功能按钮，右边是触发下拉菜单的按钮。
 
-::: preview
+<!-- ::: preview
 demo-preview=../demo/dropdown/SplitButton.vue
-:::
+::: -->
 
 ## 尺寸
 
