@@ -11,4 +11,5 @@ library.add(fas)
 const installer = makeInstaller(commponents);
 
 export * from "@easy-collective-ui/components"
+export * from "@easy-collective-ui/locale"
 export default installer;

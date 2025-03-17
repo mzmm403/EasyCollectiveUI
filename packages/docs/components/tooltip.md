@@ -5,6 +5,10 @@ description: Tooltip 组件文档
 prev:
   link: /components/alert
   text: Alert 提示
+
+next: 
+  link: /components/popconfirm
+  text: popconfirm 气泡确认框
 ---
 
 # Tooltip 文字提示
