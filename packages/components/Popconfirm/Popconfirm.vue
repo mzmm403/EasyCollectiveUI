@@ -10,7 +10,7 @@ import EcButton from "../Button/Button.vue";
 import EcIcon from "../Icon/Icon.vue";
 
 defineOptions({
-    name: "ErPopconfirm",
+    name: "EcPopconfirm",
 });
 
 const props = withDefaults(defineProps<PopconfirmProps>(), {
