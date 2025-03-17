@@ -5,7 +5,8 @@ import {
     EcCollapse,
     EcCollapseItem,
     EcAlert,
-    EcTooltip 
+    EcTooltip,
+    EcPopconfirm 
 } from "@easy-collective-ui/components";
 import type { Plugin } from "vue";
 
@@ -16,5 +17,6 @@ export default [
     EcCollapse,
     EcCollapseItem,
     EcAlert,
-    EcTooltip
+    EcTooltip,
+    EcPopconfirm
 ] as Plugin[];

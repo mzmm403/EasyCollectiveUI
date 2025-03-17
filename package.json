@@ -8,7 +8,7 @@
     "story": "pnpm --filter @easy-collective-ui/play storybook",
     "docs:dev": "pnpm --filter @easy-collective-ui/docs dev",
     "docs:build": "pnpm --filter @easy-collective-ui/docs build",
-    "test": "run-s test-comp test-utils",
+    "test": "run-p test-comp test-utils",
     "test-comp": "cross-env NODE_ENV=test pnpm --filter @easy-collective-ui/components test",
     "test-utils": "cross-env NODE_ENV=test pnpm --filter @easy-collective-ui/utils test",
     "build": "cross-env NODE_ENV=production pnpm --filter easy-collective-ui build",
@@ -28,13 +28,10 @@
     "@types/shelljs": "^0.8.15",
     "@vitejs/plugin-vue": "^5.0.4",
     "@vitejs/plugin-vue-jsx": "^3.1.0",
-    "@vitest/coverage-v8": "1.4.0",
-    "@vue/test-utils": "2.4.5",
     "@vue/tsconfig": "^0.5.1",
     "async-validator": "^4.2.5",
     "cross-env": "^7.0.3",
     "cssnano": "^7.0.6",
-    "jsdom": "24.0.0",
     "npm-run-all": "^4.1.5",
     "postcss-color-mix": "^1.1.0",
     "postcss-each": "^1.1.0",
@@ -46,14 +43,19 @@
     "typescript": "^5.2.2",
     "vite": "^5.1.4",
     "vitest": "^1.4.0",
-    "vue-tsc": "^1.8.27"
+    "vue-tsc": "^1.8.27",
+    "vue3-i18n": "^1.1.5"
   },
   "dependencies": {
     "@easy-collective-ui/hooks": "workspace:*",
+    "@easy-collective-ui/locale": "workspace:*",
     "@easy-collective-ui/theme": "workspace:*",
     "@easy-collective-ui/utils": "workspace:*",
     "easy-collective-ui": "workspace:*",
     "lodash-es": "^4.17.21",
-    "vue": "^3.4.19"
+    "vue": "^3.4.19",
+    "@vitest/coverage-v8": "1.4.0",
+    "@vue/test-utils": "2.4.5",
+    "jsdom": "24.0.0"
   }
 }
