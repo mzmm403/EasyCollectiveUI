@@ -42,7 +42,8 @@ export default defineConfig({
         text: "反馈组件",
         collapsed: false,
         items: [
-          { text: "Alert 提示", link: "components/alert" }
+          { text: "Alert 提示", link: "components/alert" },
+          { text: "Tooltip 文字提示", link: "components/tooltip" }
         ]
       }
     ],

@@ -1,6 +1,10 @@
 ---
 title: Alert
 description: Alert 组件文档
+
+next:
+  link: /components/tooltip
+  text: Tooltip 文字提示 
 ---
 
 
