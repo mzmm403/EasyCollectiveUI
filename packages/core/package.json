@@ -1,6 +1,6 @@
 {
   "name": "easy-collective-ui",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "Components Library by Vue3 + TS",
   "type": "module",
   "main": "./dist/umd/index.umd.cjs",
@@ -25,7 +25,7 @@
   ],
   "scripts": {
     "build": "run-p build-es build-umd",
-    "build:watch":"run-p build-es:watch build-umd:watch",
+    "build:watch": "run-p build-es:watch build-umd:watch",
     "build-umd": "vite build --config vite.umd.config.ts",
     "build-es": "vite build --config vite.es.config.ts",
     "build-umd:watch": "vite build --watch --config vite.umd.config.ts",
