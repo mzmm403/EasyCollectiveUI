@@ -16,7 +16,7 @@
     "release": "pnpm --filter easy-collective-ui release"
   },
   "keywords": [],
-  "author": "",
+  "author": "mzmm403",
   "license": "ISC",
   "devDependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.5.1",

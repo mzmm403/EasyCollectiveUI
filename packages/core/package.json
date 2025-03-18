@@ -7,7 +7,15 @@
   "module": "./dist/es/index.js",
   "types": "./dist/types/core/index.d.ts",
   "files": [
-    "dist"
+    "dist",
+    "README.md"
+  ],
+  "keywords": [
+    "vite",
+    "TypeScript",
+    "vue3",
+    "vue",
+    "component"
   ],
   "exports": {
     ".": {
@@ -32,7 +40,6 @@
     "build-es:watch": "vite build --watch --config vite.es.config.ts",
     "release": "release-it"
   },
-  "keywords": [],
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.5.1",
     "@fortawesome/free-solid-svg-icons": "^6.5.1",
