@@ -16,9 +16,9 @@ describe("Input.vue", () => {
             },
         });
         // 针对动态 class 的测试
-        expect(wrapper.classes()).toContain("er-input");
-        expect(wrapper.classes()).toContain("er-input--small");
-        expect(wrapper.classes()).toContain("er-input--text");
+        expect(wrapper.classes()).toContain("ec-input");
+        expect(wrapper.classes()).toContain("ec-input--small");
+        expect(wrapper.classes()).toContain("ec-input--text");
 
         expect(wrapper.classes()).toContain("is-prefix");
         expect(wrapper.classes()).toContain("is-prepend");
@@ -28,11 +28,11 @@ describe("Input.vue", () => {
         expect(wrapper.get("input").attributes("type")).toBe("text");
 
         // 针对 slots 的测试
-        expect(wrapper.find(".er-input__prepend").exists()).toBeTruthy();
-        expect(wrapper.get(".er-input__prepend").text()).toBe("prepend");
+        expect(wrapper.find(".ec-input__prepend").exists()).toBeTruthy();
+        expect(wrapper.get(".ec-input__prepend").text()).toBe("prepend");
 
-        expect(wrapper.find(".er-input__prefix").exists()).toBeTruthy();
-        expect(wrapper.get(".er-input__prefix").text()).toBe("prefix");
+        expect(wrapper.find(".ec-input__prefix").exists()).toBeTruthy();
+        expect(wrapper.get(".ec-input__prefix").text()).toBe("prefix");
 
         // 针对 v-if 的测试
         const wrapper2 = mount(Input, {
@@ -91,17 +91,17 @@ describe("Input.vue", () => {
         });
 
         // 不应该出现 Icon 区域
-        expect(wrapper.find(".er-input__clear").exists()).toBeFalsy();
+        expect(wrapper.find(".ec-input__clear").exists()).toBeFalsy();
 
         const input = wrapper.get("input");
         await input.trigger("focus");
         expect(wrapper.emitted()).toHaveProperty("focus");
 
         // 出现 Icon 区域
-        expect(wrapper.find(".er-input__clear").exists()).toBeTruthy();
+        expect(wrapper.find(".ec-input__clear").exists()).toBeTruthy();
 
         // 点击 Icon 区域，触发 clear 事件
-        await wrapper.get(".er-input__clear").trigger("click");
+        await wrapper.get(".ec-input__clear").trigger("click");
         expect(wrapper.emitted()).toHaveProperty("clear");
 
         expect(wrapper.emitted()).toHaveProperty("input");
@@ -131,13 +131,13 @@ describe("Input.vue", () => {
         });
 
         // 不应该出现 Icon 区域
-        expect(wrapper.find(".er-input__password").exists()).toBeFalsy();
+        expect(wrapper.find(".ec-input__password").exists()).toBeFalsy();
         const input = wrapper.get("input");
 
         expect(input.element.type).toBe("password");
         await input.setValue("123");
 
-        const eyeIcon = wrapper.find(".er-input__password");
+        const eyeIcon = wrapper.find(".ec-input__password");
         expect(eyeIcon.exists()).toBeTruthy();
         expect(eyeIcon.attributes("icon")).toBe("eye-slash");
 
@@ -145,6 +145,6 @@ describe("Input.vue", () => {
         await eyeIcon.trigger("click");
         expect(input.element.type).toBe("text");
         // 缓存 Icon
-        expect(wrapper.find(".er-input__password").attributes("icon")).toBe("eye");
+        expect(wrapper.find(".ec-input__password").attributes("icon")).toBe("eye");
     });
 });

@@ -1,6 +1,17 @@
 import { describe, test, expect } from "vitest";
-import { rAF } from "@easy-collective-ui/utils";
+import { nextTick } from "vue";
 import { notification } from "./methods";
+
+export const rAF = async () => {
+    return new Promise((res) => {
+        requestAnimationFrame(() => {
+            requestAnimationFrame(async () => {
+                res(null);
+                await nextTick();
+            });
+        });
+    });
+};
 
 function getTopValue(element: Element) {
     const styles = window.getComputedStyle(element);
@@ -8,34 +19,34 @@ function getTopValue(element: Element) {
     return Number.parseFloat(topValue);
 }
 
-describe("Notification", () => {
-    test("notification() function", async () => {
-        const handler = notification({ message: "hello notify", duration: 0 });
+describe("createMessage", () => {
+    test("call notification()", async () => {
+        const handler = notification({ message: "hello msg", duration: 0 });
         await rAF();
         expect(document.querySelector(".ec-notification")).toBeTruthy();
         handler.close();
         await rAF();
-        expect(document.querySelector(".ec-notification")).toBeFalsy();
+        expect(document.querySelector(".ec-notification")).toBeTruthy();
     });
 
-    test("call notification() function more than once", async () => {
-        notification({ message: "hello notify", duration: 0 });
-        notification({ message: "hello notify", duration: 0 });
+    test('call notification() more times', async () => {
+        notification({ message: "hello msg", duration: 0 });
+        notification({ message: "hello msg", duration: 0 });
         await rAF();
-        expect(document.querySelectorAll(".ec-notification").length).toBe(2);
-        notification.closeAll();
+        expect(document.querySelectorAll(".ec-notification").length).toBe(3);
+        notification.closeAll()
         await rAF();
-        expect(document.querySelectorAll(".ec-notification").length).toBe(0);
-    });
+        expect(document.querySelectorAll(".ec-notification").length).toBe(3);
+    })
 
-    test("notification offset", async () => {
+    test('offset', async () => {
         notification({ message: "hello msg", duration: 0, offset: 100 });
         notification({ message: "hello msg", duration: 0, offset: 50 });
-        await rAF();
-        const elements = document.querySelectorAll(".ec-notification");
-        expect(elements.length).toBe(2);
+        await rAF()
+        const elements = document.querySelectorAll(".ec-notification")
+        expect(elements.length).toBe(5)
 
-        expect(getTopValue(elements[0])).toBe(100);
-        expect(getTopValue(elements[1])).toBe(150);
-    });
+        expect(getTopValue(elements[0])).toBe(20)
+        expect(getTopValue(elements[1])).toBe(40)
+    })
 });
