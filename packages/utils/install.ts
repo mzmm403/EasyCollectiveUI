@@ -1,5 +1,5 @@
 // 引入 Vue 中的 App 和 Plugin 类型，用于定义插件和应用实例的类型
-import type { App,Plugin } from "vue"
+import type { App, Plugin } from "vue"
 // 从 lodash-es 库中引入 each 函数，用于遍历数组或对象。
 import { each } from "lodash-es"
 
@@ -12,10 +12,10 @@ type SFCWithInstall<T> = T & Plugin
  * @returns 
  */
 // 定义一个导出函数 makeInstaller，接受一个 Plugin 类型的数组 components，用于批量安装组件。
-export function makeInstaller(componets: Plugin[]){
+export function makeInstaller(componets: Plugin[]) {
     const installer = (app: App) => {
         // 使用 each 函数遍历 components 数组，将每个组件使用 app.use 方法进行安装。
-        each(componets,(c) => app.use(c))
+        each(componets, (c) => app.use(c))
     }
     // 返回 installer 函数，作为插件。
     return installer as Plugin
@@ -33,8 +33,15 @@ export const withInstall = <T>(component: T) => {
         // 获取组件的名称，并使用 app.component 方法将组件注册到应用实例中。
         const name = (component as any).name
         // 使用 app.component 方法将组件注册到应用实例中。
-        app.component(name,component as Plugin)
+        app.component(name, component as Plugin)
     }
     // 返回组件，作为带有 install 方法的插件。
     return component as SFCWithInstall<T>
 }
+
+export const withInstallFunction = <T>(fn: T, name: string) => {
+    (fn as SFCWithInstall<T>).install = (app: App) => {
+        app.config.globalProperties[name] = fn;
+    };
+    return fn as SFCWithInstall<T>;
+};

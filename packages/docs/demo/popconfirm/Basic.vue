@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ja, ko, en, zhCn, zhTw } from "easy-collective-ui";
+import { ja, ko, en, zhCn, zhTw, EcConfigProvider } from "easy-collective-ui";
 import { get } from "lodash-es";
 
 import { computed, ref } from "vue";

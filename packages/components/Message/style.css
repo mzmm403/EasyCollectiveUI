@@ -1,0 +1,80 @@
+.ec-message {
+  --ec-message-bg-color: var(--ec-color-info-light-9);
+  --ec-message-border-color: var(--ec-border-color-lighter);
+  --ec-message-padding: 15px 19px;
+  --ec-message-close-size: 16px;
+  --ec-message-close-icon-color: var(--ec-text-color-placeholder);
+  --ec-message-close-hover-color: var(--ec-text-color-secondary);
+  --ec-message-icon-size: 16px;
+  --ec-message-icon-margin: 8px;
+}
+
+.ec-message {
+  width: fit-content;
+  max-width: calc(100% - 32px);
+  box-sizing: border-box;
+  border-radius: var(--ec-border-radius-base);
+  border-width: var(--ec-border-width);
+  border-style: var(--ec-border-style);
+  border-color: var(--ec-message-border-color);
+  position: fixed;
+  left: 50%;
+  top: 20px;
+  transform: translateX(-50%);
+  background-color: var(--ec-message-bg-color);
+  padding: var(--ec-message-padding);
+  display: flex;
+  align-items: center;
+  transition: top var(--ec-transition-duration),
+    opacity var(--ec-transition-duration),
+    transform var(--ec-transition-duration);
+  .ec-message__icon {
+    color: var(--ec-message-text-color);
+    font-size: var(--ec-message-icon-size);
+    width: var(--ec-message-icon-size);
+    margin-right: var(--ec-message-icon-margin);
+  }
+  .ec-message__content {
+    color: var(--ec-message-text-color);
+    overflow-wrap: break-word;
+  }
+  &.is-close .ec-message__content {
+    padding-right: 10px;
+  }
+  &.text-center {
+    justify-content: center;
+  }
+  .ec-message__close {
+    display: flex;
+    align-items: center;
+  }
+  .ec-message__close .ec-icon {
+    cursor: pointer;
+  }
+}
+
+@each $val in info, success, warning, danger {
+  .ec-message--$(val) {
+    --ec-message-bg-color: var(--ec-color-$(val)-light-9);
+    --ec-message-border-color: var(--ec-color-$(val)-light-8);
+    --ec-message-text-color: var(--ec-color-$(val));
+    .ec-message__close {
+      --ec-icon-color: var(--ec-color-$(val));
+    }
+  }
+}
+
+.ec-message--error {
+  --ec-message-bg-color: var(--ec-color-danger-light-9);
+  --ec-message-border-color: var(--ec-color-danger-light-8);
+  --ec-message-text-color: var(--ec-color-danger);
+  .ec-message__close {
+    --ec-icon-color: var(--ec-color-danger);
+  }
+}
+
+.ec-message.fade-up-enter-from,
+.ec-message.fade-up-leave-to {
+  opacity: 0;
+  transform: translate(-50%, -100%);
+}

@@ -1,8 +1,8 @@
 .ec-dropdown .ec-dropdown__menu {
   --ec-dropdown-menuItem-hovec-fill: var(--ec-color-primary-light-9);
   --ec-dropdown-menuItem-hovec-color: var(--ec-color-primary);
-  --ec-dropdown-menuItem-disabled-color: var(--ec-bordec-color-lighter);
-  --ec-dropdown-menuItem-divided-color: var(--ec-bordec-color-lighter);
+  --ec-dropdown-menuItem-disabled-color: var(--ec-border-color-lighter);
+  --ec-dropdown-menuItem-divided-color: var(--ec-border-color-lighter);
 }
 .ec-dropdown {
   display: inline-block;
@@ -53,6 +53,6 @@
   }
   .divided-placeholder {
     margin: 6px 0;
-    bordec-top: 1px solid var(--ec-dropdown-menuItem-divided-color);
+    border-top: 1px solid var(--ec-dropdown-menuItem-divided-color);
   }
 }
