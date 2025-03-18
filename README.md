@@ -1,7 +1,13 @@
 # EasyCollectiveUI
 
 
-![Npm 版本](https://img.shields.io/badge/mzmm_403-ecui_v1.1.0)
+![Npm 版本](https://img.shields.io/badge/mzmm403-EasyCollectiveUI_v1.1.2-pink)
+
+## 📖 地址
+[EasyCollectiveUI文档](https://mzmm403.github.io/EasyCollectiveUI/)
+[项目Npm地址](https://www.npmjs.com/package/easy-collective-ui)
+
+
 
 
 ## 简介🚩
