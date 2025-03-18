@@ -1,6 +1,6 @@
 {
   "name": "easy-collective-ui",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Components Library by Vue3 + TS",
   "type": "module",
   "main": "./dist/umd/index.umd.cjs",
