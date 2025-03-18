@@ -5,6 +5,8 @@ import useDisabledStyle from "./useDisabledStyle";
 import useId from "./useId";
 import useZIndex from "./useZIndex";
 import useOffset from "./useOffset";
+import useFocusController from "./useFocusController";
+import useProp from "./useProp";
 
 export {
     useClickOutside,
@@ -13,5 +15,7 @@ export {
     useDisabledStyle,
     useId,
     useZIndex,
-    useOffset
+    useOffset,
+    useFocusController,
+    useProp
 };
