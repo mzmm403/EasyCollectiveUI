@@ -28,7 +28,8 @@ export default defineConfig({
         text: "基础组件",
         collapsed: false,
         items: [
-          { text: "Button 按钮", link: "components/button" }
+          { text: "Button 按钮", link: "components/button" },
+          { text: "Icon 图标", link: "components/icon" }
         ],
       },
       {
@@ -51,7 +52,16 @@ export default defineConfig({
         items: [
           { text: "Alert 提示", link: "components/alert" },
           { text: "Tooltip 文字提示", link: "components/tooltip" },
-          { text: "Popconfirm 气泡确认框", link: "components/popconfirm" }
+          { text: "Popconfirm 气泡确认框", link: "components/popconfirm" },
+          { text: "Notification 通知", link: "components/notification" }
+        ]
+      },
+      {
+        text: "表单组件",
+        collapsed: false,
+        items: [
+          { text: "Input 输入框", link: "components/input" },
+          { text: "Form 表单", link: "components/form" },
         ]
       }
     ],
