@@ -16,7 +16,7 @@ prev:
 支持将图标名称传入`icon`属性来进行引入
 
 :::preview
-demo-preview=../demo/icon/Basic.vue
+demo-preview=../demo/Icon/Basic.vue
 :::
 
 
@@ -30,7 +30,7 @@ demo-preview=../demo/icon/Basic.vue
 > 下面是部分图标的展示
 
 :::preview
-demo-preview=../demo/icon/All.vue
+demo-preview=../demo/Icon/All.vue
 :::
 
 ## Icon API
